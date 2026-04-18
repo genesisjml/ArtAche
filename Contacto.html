@@ -10,7 +10,7 @@
       .contact-content {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 45px;
       }
 
       .contact-section {
@@ -18,7 +18,7 @@
         flex-direction: column;
         gap: 20px;
         background-color: rgb(245, 245, 245);
-        padding: 40px;
+        padding: 40px 35px;
         border-radius: 8px;
       }
 
@@ -27,13 +27,14 @@
         color: rgb(0, 0, 0);
         font-weight: 700;
         margin-bottom: 10px;
+        letter-spacing: -0.5px;
       }
 
       .contact-item {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        padding: 20px 0;
+        padding: 24px 0;
         border-bottom: 1px solid rgb(220, 220, 220);
       }
 
@@ -48,12 +49,14 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        margin-bottom: 5px;
       }
 
       .contact-item-content {
         color: rgb(60, 60, 60);
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.8;
+        font-weight: 400;
       }
 
       .contact-link {
@@ -119,47 +122,190 @@
         line-height: 1.8;
       }
 
-      /* Responsive - Tablets (768px y menores) */
-      @media (max-width: 768px) {
+      /* Responsive - Tablets grandes (1025px y menores) */
+      @media (max-width: 1024px) {
         .contact-content {
-          gap: 30px;
+          gap: 42px;
         }
 
         .contact-section {
-          padding: 25px;
-          gap: 15px;
+          padding: 38px 32px;
+          gap: 19px;
         }
 
         .contact-section h2 {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
+        }
+      }
+
+      /* Responsive - Tablets (768px y menores) */
+      @media (max-width: 768px) {
+        .contact-content {
+          gap: 38px;
+        }
+
+        .contact-section {
+          padding: 32px 22px;
+          gap: 18px;
+        }
+
+        .contact-section h2 {
+          font-size: 1.6rem;
+        }
+
+        .contact-item {
+          padding: 18px 0;
+        }
+
+        .contact-item-title {
+          font-size: 1.1rem;
+        }
+
+        .contact-item-content {
+          font-size: 0.95rem;
+          line-height: 1.75;
+        }
+
+        .social-icon {
+          width: 36px;
+          height: 36px;
+          font-size: 0.95rem;
+          min-width: 36px;
+        }
+
+        .section-image {
+          max-width: 95%;
+        }
+      }
+
+      /* Responsive - Tablets pequeños (481px - 600px) */
+      @media (max-width: 600px) {
+        .contact-content {
+          gap: 32px;
+        }
+
+        .contact-section {
+          padding: 28px 18px;
+          gap: 16px;
+        }
+
+        .contact-section h2 {
+          font-size: 1.4rem;
+        }
+
+        .contact-item {
+          padding: 16px 0;
         }
 
         .contact-item-title {
           font-size: 1rem;
         }
 
+        .contact-item-content {
+          font-size: 0.92rem;
+          line-height: 1.7;
+        }
+
+        .social-network-item {
+          padding: 9px 0;
+        }
+
         .social-icon {
-          width: 36px;
-          height: 36px;
-          font-size: 1rem;
-          min-width: 36px;
+          width: 34px;
+          height: 34px;
+          font-size: 0.9rem;
+          min-width: 34px;
         }
 
         .section-image {
-          max-width: 100%;
+          max-width: 90%;
         }
       }
 
       /* Responsive - Móviles (480px y menores) */
       @media (max-width: 480px) {
         .contact-content {
-          gap: 20px;
+          gap: 28px;
         }
 
         .contact-section {
-          padding: 18px;
+          padding: 22px 16px;
+          gap: 15px;
+        }
+
+        .contact-section h2 {
+          font-size: 1.3rem;
+        }
+
+        .contact-item {
+          padding: 15px 0;
+        }
+
+        .contact-item-title {
+          font-size: 1rem;
+        }
+
+        .contact-item-content {
+          font-size: 0.9rem;
+          line-height: 1.7;
+        }
+
+        .social-icon {
+          width: 32px;
+          height: 32px;
+          font-size: 0.9rem;
+          min-width: 32px;
+        }
+
+        .section-image {
+          max-width: 95%;
+        }
+      }
+
+      /* Responsive - Móviles muy pequeños (360px y menores) */
+      @media (max-width: 360px) {
+        .contact-content {
+          gap: 24px;
+        }
+
+        .contact-section {
+          padding: 18px 13px;
           gap: 12px;
         }
+
+        .contact-section h2 {
+          font-size: 1.1rem;
+        }
+
+        .contact-item {
+          padding: 12px 0;
+        }
+
+        .contact-item-title {
+          font-size: 0.95rem;
+        }
+
+        .contact-item-content {
+          font-size: 0.85rem;
+          line-height: 1.6;
+        }
+
+        .social-network-item {
+          gap: 11px;
+          padding: 8px 0;
+        }
+
+        .social-icon {
+          width: 30px;
+          height: 30px;
+          font-size: 0.85rem;
+          min-width: 30px;
+        }
+
+        .section-image {
+          max-width: 90%;
+        }
+      }
 
         .contact-section h2 {
           font-size: 1.2rem;
