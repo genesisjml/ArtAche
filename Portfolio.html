@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mi Portafolio - Habilidades</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .portfolio-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .portfolio-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .portfolio-header h1 {
+        font-size: 2rem;
+        color: rgb(0, 0, 0);
+      }
+
+      .btn-descargar {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+      }
+
+      .btn-descargar:hover {
+        background-color: rgb(50, 50, 50);
+        transform: translateY(-2px);
+      }
+
+      .btn-descargar:active {
+        transform: translateY(0);
+      }
+
+      .skills-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .skill-card {
+        background-color: rgb(245, 245, 245);
+        padding: 30px;
+        border-radius: 8px;
+        border-left: 4px solid rgb(0, 0, 0);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .skill-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: rgb(0, 0, 0);
+      }
+
+      .skill-card p {
+        color: rgb(80, 80, 80);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .skill-tag {
+        background-color: rgb(200, 200, 200);
+        color: rgb(0, 0, 0);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .progress-skill {
+        margin-bottom: 25px;
+      }
+
+      .progress-skill-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .progress-skill-header h4 {
+        font-size: 0.95rem;
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+      }
+
+      .progress-skill-header span {
+        color: rgb(100, 100, 100);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background-color: rgb(220, 220, 220);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 4px;
+        transition: width 0.6s ease;
+      }
+
+      .about-text {
+        background-color: rgb(245, 245, 245);
+        padding: 30px;
+        border-radius: 8px;
+        line-height: 1.8;
+        color: rgb(60, 60, 60);
+      }
+
+      .about-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: rgb(0, 0, 0);
+      }
+
+      /* Responsive - Tablets (768px y menores) */
+      @media (max-width: 768px) {
+        .portfolio-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .portfolio-header h1 {
+          font-size: 1.5rem;
+        }
+
+        .btn-descargar {
+          padding: 10px 20px;
+          font-size: 0.85rem;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .skills-section {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+        }
+
+        .skill-card {
+          padding: 20px;
+        }
+
+        .skill-card h3 {
+          font-size: 1.1rem;
+        }
+
+        .about-text {
+          padding: 20px;
+        }
+
+        .about-text h2 {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Responsive - Móviles (480px y menores) */
+      @media (max-width: 480px) {
+        .portfolio-content {
+          gap: 25px;
+        }
+
+        .portfolio-header {
+          gap: 15px;
+        }
+
+        .portfolio-header h1 {
+          font-size: 1.3rem;
+        }
+
+        .skills-section {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+
+        .skill-card {
+          padding: 18px;
+        }
+
+        .skill-card h3 {
+          font-size: 1rem;
+        }
+
+        .skill-card p {
+          font-size: 0.85rem;
+        }
+
+        .skill-tag {
+          font-size: 0.75rem;
+          padding: 4px 10px;
+        }
+
+        .about-text {
+          padding: 15px;
+        }
+
+        .about-text h2 {
+          font-size: 1.1rem;
+        }
+
+        .about-text p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor_pricipal">
+      <aside class="navbar">
+        <img src="logo.png" class="imglogo" alt="Logo" />
+        <nav class="Menu">
+          <a href="index.html">Inicio</a>
+          <a href="Portfolio.html">Mis habilidades</a>
+          <a href="Contacto.html">Contacto</a>
+          <a href="Proyectos.html">Proyectos</a>
+        </nav>
+      </aside>
+      <main class="contenido" style="flex-direction: column; padding: 40px; overflow-y: auto;">
+        <div class="portfolio-content">
+          <!-- Header con título y botón de descarga -->
+          <div class="portfolio-header">
+            <h1>Mi Portafolio Profesional</h1>
+            <a href="assets/Portfolio.pdf" download="Portfolio.pdf" class="btn-descargar">
+              📥 Descargar CV
+            </a>
+          </div>
+
+          <!-- Sección About -->
+          <div class="about-text">
+            <h2>Sobre mí</h2>
+            <p>
+              Soy un profesional creativo y apasionado por el desarrollo web y diseño digital.
+              Con experiencia en múltiples tecnologías, busco crear soluciones innovadoras y funcionales
+              que resuelvan problemas reales. Mi enfoque se centra en la calidad, la atención al detalle
+              y la entrega de proyectos que superen las expectativas del cliente.
+            </p>
+          </div>
+
+          <!-- Sección de Habilidades Técnicas -->
+          <div class="skills-section">
+            <!-- Frontend -->
+            <div class="skill-card">
+              <h3>🎨 Frontend</h3>
+              <p>Especialista en crear interfaces modernas y responsivas utilizando tecnologías web actuales.</p>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>HTML5 & CSS3</h4>
+                  <span>95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>JavaScript</h4>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>React</h4>
+                  <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JS</span>
+                <span class="skill-tag">React</span>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-card">
+              <h3>⚙️ Backend</h3>
+              <p>Experiencia en desarrollo de servidores y bases de datos robustos y escalables.</p>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Node.js</h4>
+                  <span>88%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Python</h4>
+                  <span>82%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 82%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Bases de Datos</h4>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">SQL</span>
+              </div>
+            </div>
+
+            <!-- Diseño -->
+            <div class="skill-card">
+              <h3>🎭 Diseño</h3>
+              <p>Creación de diseños atractivos que mejoran la experiencia del usuario en cada proyecto.</p>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>UI/UX Design</h4>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Figma</h4>
+                  <span>87%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 87%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Responsive Design</h4>
+                  <span>92%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 92%"></div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Adobe XD</span>
+                <span class="skill-tag">Responsive</span>
+              </div>
+            </div>
+
+            <!-- Herramientas -->
+            <div class="skill-card">
+              <h3>🛠️ Herramientas</h3>
+              <p>Dominio de herramientas modernas para optimizar el flujo de trabajo y desarrollo.</p>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Git & GitHub</h4>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>VS Code</h4>
+                  <span>95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="progress-skill">
+                <div class="progress-skill-header">
+                  <h4>Docker</h4>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Webpack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

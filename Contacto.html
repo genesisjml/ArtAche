@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .contact-container {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+
+      .contact-form {
+        flex: 1;
+      }
+
+      .contact-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: rgb(0, 0, 0);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        padding: 12px;
+        border: 2px solid rgb(200, 200, 200);
+        border-radius: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: rgb(0, 0, 0);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .btn-submit {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+
+      .btn-submit:hover {
+        background-color: rgb(50, 50, 50);
+      }
+
+      .info-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .info-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: rgb(0, 0, 0);
+      }
+
+      .info-section p {
+        color: rgb(80, 80, 80);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .info-section a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .info-section a:hover {
+        color: rgb(149, 149, 149);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      .social-links a:hover {
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
+
+      /* Responsive - Tablets (768px y menores) */
+      @media (max-width: 768px) {
+        .contact-container {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .contact-form,
+        .contact-info {
+          flex: 1 1 100%;
+        }
+
+        .contact-info {
+          gap: 20px;
+        }
+
+        .btn-submit {
+          padding: 10px 20px;
+          font-size: 0.85rem;
+        }
+      }
+
+      /* Responsive - Móviles (480px y menores) */
+      @media (max-width: 480px) {
+        .contact-container {
+          gap: 20px;
+        }
+
+        .form-group {
+          margin-bottom: 15px;
+        }
+
+        .form-group label {
+          font-size: 0.85rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+          padding: 10px;
+          font-size: 0.85rem;
+        }
+
+        .info-section h3 {
+          font-size: 1rem;
+        }
+
+        .info-section p {
+          font-size: 0.85rem;
+        }
+
+        .social-links {
+          gap: 10px;
+        }
+
+        .social-links a {
+          width: 36px;
+          height: 36px;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor_pricipal">
+      <aside class="navbar">
+        <img src="logo.png" class="imglogo" alt="Logo" />
+        <nav class="Menu">
+          <a href="index.html">Inicio</a>
+          <a href="Portfolio.html">Mis habilidades</a>
+          <a href="Contacto.html">Contacto</a>
+          <a href="Proyectos.html">Proyectos</a>
+        </nav>
+      </aside>
+      <main class="contenido" style="flex-direction: column; padding: 40px;">
+        <h1 style="margin-bottom: 30px; font-size: 2rem;">Ponte en contacto</h1>
+        <div class="contact-container">
+          <!-- Formulario de contacto -->
+          <form class="contact-form" method="POST" action="#" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo *</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto *</label>
+              <input type="text" id="asunto" name="asunto" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+          </form>
+
+          <!-- Información de contacto -->
+          <div class="contact-info">
+            <div class="info-section">
+              <h3>📧 Email</h3>
+              <p>
+                <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
+              </p>
+            </div>
+
+            <div class="info-section">
+              <h3>📱 Teléfono</h3>
+              <p>
+                <a href="tel:+34123456789">+34 123 456 789</a>
+              </p>
+            </div>
+
+            <div class="info-section">
+              <h3>📍 Ubicación</h3>
+              <p>Ciudad, País</p>
+            </div>
+
+            <div class="info-section">
+              <h3>🌐 Redes Sociales</h3>
+              <div class="social-links">
+                <a href="https://linkedin.com" title="LinkedIn">in</a>
+                <a href="https://github.com" title="GitHub">GH</a>
+                <a href="https://twitter.com" title="Twitter">𝕏</a>
+                <a href="https://instagram.com" title="Instagram">📷</a>
+              </div>
+            </div>
+
+            <div class="info-section">
+              <h3>⏰ Horario de Respuesta</h3>
+              <p>Respondo mensajes de lunes a viernes de 9:00 AM a 6:00 PM.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        alert(
+          "¡Gracias por tu mensaje! Este es un ejemplo. Implementa tu backend para enviar emails."
+        );
+        event.target.reset();
+      }
+    </script>
+  </body>
+</html>
