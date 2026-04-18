@@ -10,7 +10,7 @@
       .portfolio-content {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 45px;
       }
 
       .portfolio-section {
@@ -18,7 +18,7 @@
         flex-direction: column;
         gap: 20px;
         background-color: rgb(245, 245, 245);
-        padding: 40px;
+        padding: 40px 35px;
         border-radius: 8px;
       }
 
@@ -26,14 +26,16 @@
         font-size: 2rem;
         color: rgb(0, 0, 0);
         font-weight: 700;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
       }
 
       .portfolio-section p {
         color: rgb(60, 60, 60);
-        font-size: 0.95rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 1.85;
+        margin-bottom: 15px;
+        font-weight: 400;
       }
 
       .section-image {
@@ -42,7 +44,7 @@
         height: auto;
         border-radius: 8px;
         object-fit: contain;
-        margin: 20px 0;
+        margin: 25px 0;
       }
 
       .btn-descargar {
@@ -92,23 +94,108 @@
         border-radius: 8px;
       }
 
-      /* Responsive - Tablets (768px y menores) */
-      @media (max-width: 768px) {
+      /* Responsive - Tablets grandes (1025px y menores) */
+      @media (max-width: 1024px) {
         .portfolio-content {
-          gap: 30px;
+          gap: 42px;
         }
 
         .portfolio-section {
-          padding: 25px;
+          padding: 38px 32px;
+          gap: 19px;
+        }
+
+        .portfolio-section h2 {
+          font-size: 1.9rem;
+        }
+
+        .section-image {
+          max-width: 550px;
+        }
+      }
+
+      /* Responsive - Tablets (769px - 768px) */
+      @media (max-width: 768px) {
+        .portfolio-content {
+          gap: 38px;
+        }
+
+        .portfolio-section {
+          padding: 32px 22px;
+          gap: 18px;
+        }
+
+        .portfolio-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .portfolio-section p {
+          font-size: 0.95rem;
+          line-height: 1.75;
+        }
+
+        .btn-descargar {
+          padding: 11px 22px;
+          font-size: 0.9rem;
+        }
+
+        .section-image {
+          max-width: 100%;
+          margin: 18px 0;
+        }
+      }
+
+      /* Responsive - Tablets pequeños (481px - 600px) */
+      @media (max-width: 600px) {
+        .portfolio-content {
+          gap: 32px;
+        }
+
+        .portfolio-section {
+          padding: 28px 18px;
+          gap: 16px;
+        }
+
+        .portfolio-section h2 {
+          font-size: 1.6rem;
+          margin-bottom: 8px;
+        }
+
+        .portfolio-section p {
+          font-size: 0.92rem;
+          line-height: 1.7;
+        }
+
+        .btn-descargar {
+          padding: 10px 20px;
+          font-size: 0.88rem;
+        }
+
+        .video-container {
+          margin: 16px 0;
+        }
+      }
+
+      /* Responsive - Móviles (480px y menores) */
+      @media (max-width: 480px) {
+        .portfolio-content {
+          gap: 28px;
+        }
+
+        .portfolio-section {
+          padding: 22px 16px;
           gap: 15px;
         }
 
         .portfolio-section h2 {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
+          margin-bottom: 8px;
         }
 
         .portfolio-section p {
           font-size: 0.9rem;
+          line-height: 1.7;
+          margin-bottom: 12px;
         }
 
         .btn-descargar {
@@ -120,36 +207,47 @@
 
         .section-image {
           max-width: 100%;
+          margin: 16px 0;
+        }
+
+        .video-container {
+          margin: 12px 0;
         }
       }
 
-      /* Responsive - Móviles (480px y menores) */
-      @media (max-width: 480px) {
+      /* Responsive - Móviles muy pequeños (360px y menores) */
+      @media (max-width: 360px) {
         .portfolio-content {
-          gap: 20px;
+          gap: 24px;
         }
 
         .portfolio-section {
-          padding: 18px;
+          padding: 18px 13px;
           gap: 12px;
         }
 
         .portfolio-section h2 {
           font-size: 1.2rem;
+          margin-bottom: 6px;
         }
 
         .portfolio-section p {
           font-size: 0.85rem;
           line-height: 1.6;
+          margin-bottom: 10px;
         }
 
         .btn-descargar {
-          padding: 10px 18px;
+          padding: 9px 18px;
           font-size: 0.8rem;
         }
 
         .section-image {
-          max-width: 95%;
+          margin: 12px 0;
+        }
+
+        .video-container {
+          margin: 10px 0;
         }
       }
     </style>
