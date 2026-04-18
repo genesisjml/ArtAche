@@ -6,13 +6,15 @@
 }
 .contenedor_pricipal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 100vh;
+  align-items: center;
 }
 .navbar {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
   padding: 40px;
   background-color: rgb(255, 255, 255);
   gap: 20px;
@@ -39,17 +41,41 @@
 .Menu a:hover {
   color: rgb(149, 149, 149);
 }
+
+.menu-active {
+  display: block;
+  color: rgb(149, 149, 149);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: default;
+  font-weight: 500;
+}
 .contenido {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
   padding: 20px;
+  background-color: rgb(255, 255, 255);
 }
+
+.contenido-scroll {
+  padding: 40px;
+  overflow-y: auto;
+}
+
 .contenido img {
   width: 100%;
   height: auto;
   max-width: 100%;
+}
+.gif-content {
+  max-width: 90%;
+  object-fit: contain;
+  margin-top: 20px;
 }
 aside img {
   height: auto;
@@ -61,6 +87,53 @@ aside img {
   object-fit: contain;
 }
 
+.descripcion {
+  text-align: center;
+  font-family: 'Georgia', 'Garamond', serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(80, 80, 80);
+  padding: 0 20px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: rgb(240, 240, 240);
+  border-top: 1px solid rgb(220, 220, 220);
+  padding: 30px 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-text {
+  color: rgb(80, 80, 80);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-copyright {
+  color: rgb(100, 100, 100);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: rgb(200, 200, 200);
+  margin: 10px 0;
+}
+
 /* Responsive - Tablets (768px y menores) */
 @media (max-width: 768px) {
   .contenedor_pricipal {
@@ -70,7 +143,7 @@ aside img {
   .navbar {
     width: 100%;
     padding: 30px 20px;
-    align-items: flex-start;
+    align-items: center;
   }
   
   .imglogo {
@@ -84,7 +157,29 @@ aside img {
   
   .contenido {
     width: 100%;
-    min-height: 300px;
+    min-height: auto;
+    justify-content: center;
+  }
+  
+  .gif-content {
+    max-width: 95%;
+  }
+
+  .footer {
+    padding: 20px 15px;
+    margin-top: 30px;
+  }
+
+  .footer-content {
+    gap: 15px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
   }
 }
 
@@ -107,5 +202,18 @@ aside img {
   .contenido {
     padding: 15px;
     min-height: 250px;
+  }
+
+  .footer {
+    padding: 15px 10px;
+    margin-top: 20px;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.75rem;
   }
 }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Galería Visual</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .gallery-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .gallery-header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(245, 245, 245);
+        padding: 40px;
+        border-radius: 8px;
+      }
+
+      .gallery-header h1 {
+        font-size: 2.5rem;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+      }
+
+      .gallery-header p {
+        color: rgb(60, 60, 60);
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        padding: 20px 0;
+      }
+
+      .gallery-item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Responsive - Tablets (768px y menores) */
+      @media (max-width: 768px) {
+        .gallery-content {
+          gap: 30px;
+        }
+
+        .gallery-header {
+          padding: 25px;
+          gap: 15px;
+        }
+
+        .gallery-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .gallery-header p {
+          font-size: 0.9rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+        }
+
+        .footer {
+          padding: 20px 15px;
+          margin-top: 30px;
+        }
+
+        .footer-content {
+          gap: 15px;
+        }
+
+        .footer-text {
+          font-size: 0.85rem;
+        }
+
+        .footer-copyright {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Responsive - Móviles (480px y menores) */
+      @media (max-width: 480px) {
+        .gallery-content {
+          gap: 20px;
+        }
+
+        .gallery-header {
+          padding: 18px;
+          gap: 12px;
+        }
+
+        .gallery-header h1 {
+          font-size: 1.3rem;
+        }
+
+        .gallery-header p {
+          font-size: 0.85rem;
+          line-height: 1.6;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor_pricipal">
+      <aside class="navbar">
+        <img src="logo.png" class="imglogo" alt="Logo" />
+        <nav class="Menu">
+          <a href="index.html">Inicio</a>
+          <a href="Habilidades.html">Habilidades</a>
+          <span class="menu-active">Galería</span>
+          <a href="Contacto.html">Contacto</a>
+        </nav>
+      </aside>
+      <main class="contenido contenido-scroll">
+        <div class="gallery-content">
+          <!-- Encabezado de la Galería -->
+          <div class="gallery-header">
+            <h1>Galería Visual</h1>
+            <p>Un espacio sin distracciones dedicado exclusivamente a la apreciación de mis ilustraciones, concept art y diseños finales.</p>
+          </div>
+
+          <!-- Grid de Imágenes -->
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="assets/c1.png" alt="Ilustración 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/c2.png" alt="Ilustración 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/c3.png" alt="Ilustración 3" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/c4.png" alt="Ilustración 4" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/c5.png" alt="Ilustración 5" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-text">
+          © 2026 <strong>ArtAche Studios</strong> - Todos los derechos reservados.
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-copyright">
+          Derechos de imagen y contenido visual protegidos bajo © ArtAche Studios.<br>
+          Diseño y desarrollo por <strong>Génesis JML</strong> - Visual Development.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
