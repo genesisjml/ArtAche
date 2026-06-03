@@ -14,7 +14,7 @@ Contribuir como artista de desarrollo visual en las grandes producciones de la i
 
 ---
 
-## 💻 Habilidades Técnicas
+## Habilidades Técnicas
 
 ### Visual Development
 - Concept Art
@@ -31,15 +31,9 @@ Contribuir como artista de desarrollo visual en las grandes producciones de la i
 - Herramientas de ilustración digital (2D)
 - Edición de imagen
 
-### Metodologías y Soft Skills
-- Gestión de proyectos con Personal Scrum
-- Comunicación efectiva
-- Resolución de problemas visuales
-- Visión comercial
-
 ---
 
-## 📂 Estructura del Portfolio
+## Estructura del Portfolio
 
 Este sitio contiene las siguientes secciones donde detallo mi trabajo:
 
