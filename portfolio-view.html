@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ArtAche Studios - Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: rgb(250, 250, 250);
+      }
+
+      .pdf-viewer-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .pdf-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .pdf-header h1 {
+        font-size: 1.8rem;
+        color: rgb(0, 0, 0);
+        margin: 0;
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .pdf-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn-back {
+        background-color: rgb(149, 149, 149);
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+      }
+
+      .btn-back:hover {
+        background-color: rgb(120, 120, 120);
+        transform: translateY(-2px);
+      }
+
+      .btn-back:active {
+        transform: translateY(0);
+      }
+
+      .btn-download {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+      }
+
+      .btn-download:hover {
+        background-color: rgb(50, 50, 50);
+        transform: translateY(-2px);
+      }
+
+      .btn-download:active {
+        transform: translateY(0);
+      }
+
+      .pdf-viewer {
+        flex: 1;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+      }
+
+      .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        min-height: 600px;
+      }
+
+      @media (max-width: 768px) {
+        .pdf-viewer-container {
+          padding: 15px;
+        }
+
+        .pdf-header {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 15px;
+          gap: 15px;
+        }
+
+        .pdf-header h1 {
+          font-size: 1.5rem;
+          width: 100%;
+        }
+
+        .pdf-actions {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .btn-back,
+        .btn-download {
+          width: 100%;
+          justify-content: center;
+          padding: 12px 20px;
+          font-size: 0.88rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .pdf-viewer-container {
+          padding: 10px;
+        }
+
+        .pdf-header {
+          padding: 12px;
+          gap: 12px;
+        }
+
+        .pdf-header h1 {
+          font-size: 1.3rem;
+        }
+
+        .btn-back,
+        .btn-download {
+          width: 100%;
+          padding: 10px 15px;
+          font-size: 0.85rem;
+        }
+
+        .pdf-viewer iframe {
+          min-height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pdf-viewer-container">
+      <div class="pdf-header">
+        <h1>Portafolio VisDev</h1>
+        <div class="pdf-actions">
+          <a href="Habilidades.html" class="btn-back">← Volver</a>
+          <a href="assets/PORTAFOLIO V2.pdf" download="PORTAFOLIO V2.pdf" class="btn-download">
+            ⬇️ Descargar
+          </a>
+        </div>
+      </div>
+      <div class="pdf-viewer">
+        <iframe src="assets/PORTAFOLIO V2.pdf" type="application/pdf"></iframe>
+      </div>
+    </div>
+
+    <!-- Botón flotante de email -->
+    <a href="mailto:artachestudios@gmail.com" class="floating-email-btn" title="Enviar email">
+      ✉️
+    </a>
+  </body>
+</html>
