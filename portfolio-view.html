@@ -14,7 +14,7 @@
       .pdf-viewer-container {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        height: auto;
         max-width: 1000px;
         margin: 0 auto;
         padding: 20px;
@@ -100,7 +100,6 @@
       }
 
       .pdf-viewer {
-        flex: 1;
         background-color: rgb(255, 255, 255);
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -109,9 +108,9 @@
 
       .pdf-viewer iframe {
         width: 100%;
-        height: 100%;
+        height: 700px;
         border: none;
-        min-height: 600px;
+        display: block;
       }
 
       @media (max-width: 768px) {
@@ -143,6 +142,10 @@
           padding: 12px 20px;
           font-size: 0.88rem;
         }
+
+        .pdf-viewer iframe {
+          height: 800px;
+        }
       }
 
       @media (max-width: 480px) {
@@ -167,7 +170,7 @@
         }
 
         .pdf-viewer iframe {
-          min-height: 500px;
+          height: 900px;
         }
       }
     </style>
