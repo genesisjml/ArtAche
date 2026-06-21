@@ -123,6 +123,27 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
 
+      .cv-text-fallback {
+        display: none;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-top: 20px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgb(60, 60, 60);
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-family: 'Courier New', monospace;
+      }
+
+      @media (max-width: 480px) {
+        .cv-text-fallback.show {
+          display: block;
+        }
+      }
+
       @media (max-width: 1024px) {
         .pdf-viewer embed {
           height: 700px;
@@ -216,7 +237,80 @@
       <div class="pdf-viewer" id="pdfViewerCV">
         <embed src="assets/Alonso Palafox Enrique - CV.pdf" type="application/pdf" />
       </div>
-      <img src="assets/B4.gif" alt="CV Preview" class="mobile-preview-image" />
+      <div class="cv-text-fallback" id="cvTextFallback">ENRIQUE CARLOS ALONSO PALAFOX
+------------------------------
+Toluca, Estado de México | Teléfono: +52 5617338060 | Correo: enriquealonsopalafox11@gmail.com
+
+PERFIL PROFESIONAL
+
+Diseñador y Animador especializado en Visual Development (VisDev), con un enfoque estratégico
+en la conceptualización e investigación de audiencias para garantizar resultados funcionales y
+narrativos. Experto en la gestión de proyectos creativos mediante metodologías ágiles y liderazgo
+de equipos multidisciplinarios en entornos de producción audiovisual.
+------------------------------
+
+EXPERIENCIA
+DISEÑADOR Y ANIMADOR INDEPENDIENTE (Freelance)
+
+Artista VisDev y Creador de Contenido - Enero 2024 – Actualidad
+
+• Implementé la metodología Personal Scrum para gestionar el desarrollo iterativo y la
+evolución constante de mi portafolio digital y proyectos de diseño.
+• Desarrollé entornos y escenarios 3D complejos en Autodesk Maya, ejecutando procesos de
+iluminación, sombreado y reemplazo de fondos (sky replacement).
+• Rediseñé la identidad visual y logotipos (como SFACTOR X3), optimizando la estructura
+tipográfica y el layout bajo parámetros técnicos de color y legibilidad.
+• Incrementé la comunidad en YouTube de 0 a más de 8,000 seguidores orgánicos mediante
+estrategias de contenido audiovisual.
+• Aseguré un tráfico mensual de más de 20,000 visitas digitales, monetizando el canal a
+través de la producción constante de contenido de animación.
+• Ejecuté proyectos de Branding para pequeñas empresas, garantizando un posicionamiento
+efectivo ante sus públicos objetivos mediante diseño de identidad.
+
+UNIVERSIDAD TECNOLÓGICA DE MÉXICO (UNITEC)
+Líder de Producción Audiovisual - Enero 2025 – Abril 2026
+
+• Lideré equipos de trabajo de gran escala para la realización de cortometrajes y proyectos de
+cine, supervisando desde la preproducción hasta la entrega final.
+• Coordiné flujos de trabajo técnicos en modelado 3D y postproducción, asegurando el
+cumplimiento de plazos y estándares de calidad académica y profesional.
+• Gestioné la comunicación entre departamentos creativos para unificar la visión artística del
+proyecto y optimizar los recursos de producción.
+
+CONTRALORÍA MUNICIPAL (EDOMEX)
+Diseñador de Identidad Visual - Agosto 2022 – Diciembre 2022
+
+• Diseñé y desplegué la nueva identidad visual para la página web y redes sociales oficiales
+del municipio.
+• Incrementé el tráfico y las visitas a las plataformas digitales en un 30% gracias a la
+reestructuración estética y funcional de los activos gráficos.
+• Ejecuté tareas técnicas de fotografía, edición de video, restauración digital y recuperación
+de documentos históricos.
+------------------------------
+
+EDUCACIÓN
+UNIVERSIDAD TECNOLÓGICA DE MÉXICO (UNITEC)
+
+• Maestría en Diseño Multimedia - Actual
+• Lic. en Diseño, Animación y Arte Digital - Abril 2023 - 2026
+
+HABILIDADES
+
+• Software Adobe: Photoshop, Illustrator, After Effects, Premiere, Lightroom, Substance
+Painter.
+• 3D y Modelado: Autodesk Maya, Blender, Nomad Sculpt, Feather 3D, AutoCAD.
+• Ilustración y Diseño: Krita, Procreate, Figma, Affinity, Canva.
+• Audio y Video: CapCut, BandLab, Audacity.
+• Programación: Python, HTML, C, C++, PSeInt.
+• Idiomas: Inglés (Nivel B2 - 80% completado).
+
+CERTIFICACIONES
+
+• Emprendimientos Creativos | Coursera (2026).
+• This Is Animation | Sony Pictures Animation & YellowBrick (2025).
+• Pensamiento Crítico y Resolución de Problemas | Santander Open Academy (2025).
+• Integridad Académica | UNITEC (2025).
+</div>
       <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #666;" id="pdfFallbackCV" style="display: none;">
         Tu navegador no puede visualizar PDFs. 
         <a href="assets/Alonso Palafox Enrique - CV.pdf" download="Alonso Palafox Enrique - CV.pdf" style="color: #000; font-weight: 600; text-decoration: underline;">Descarga el PDF aquí</a>
@@ -224,6 +318,7 @@
       <script>
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
           document.getElementById('pdfViewerCV').innerHTML = '';
+          document.getElementById('cvTextFallback').classList.add('show');
         }
       </script>
     </div>
