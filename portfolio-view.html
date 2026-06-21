@@ -106,16 +106,26 @@
         overflow: auto;
       }
 
-      .pdf-viewer iframe {
+      .pdf-viewer embed {
         width: 100%;
-        height: 800px;
+        height: 1000px;
         border: none;
         display: block;
       }
 
+      .mobile-preview-image {
+        display: none;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 15px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
       @media (max-width: 1024px) {
-        .pdf-viewer iframe {
-          height: 600px;
+        .pdf-viewer embed {
+          height: 700px;
         }
       }
 
@@ -149,7 +159,7 @@
           font-size: 0.88rem;
         }
 
-        .pdf-viewer iframe {
+        .pdf-viewer embed {
           height: 70vh;
           min-height: 500px;
         }
@@ -176,9 +186,18 @@
           font-size: 0.85rem;
         }
 
-        .pdf-viewer iframe {
-          height: 80vh;
-          min-height: 400px;
+        .pdf-viewer {
+          background: transparent;
+          box-shadow: none;
+          overflow: visible;
+        }
+
+        .pdf-viewer embed {
+          display: none;
+        }
+
+        .mobile-preview-image {
+          display: block;
         }
       }
     </style>
@@ -197,6 +216,7 @@
       <div class="pdf-viewer" id="pdfViewerPortfolio">
         <embed src="assets/PORTAFOLIO V2.pdf" type="application/pdf" />
       </div>
+      <img src="assets/B4.gif" alt="Portfolio Preview" class="mobile-preview-image" />
       <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #666;" id="pdfFallbackPortfolio" style="display: none;">
         Tu navegador no puede visualizar PDFs. 
         <a href="assets/PORTAFOLIO V2.pdf" download="PORTAFOLIO V2.pdf" style="color: #000; font-weight: 600; text-decoration: underline;">Descarga el PDF aquí</a>
@@ -204,9 +224,6 @@
       <script>
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
           document.getElementById('pdfViewerPortfolio').innerHTML = '';
-          document.getElementById('pdfFallbackPortfolio').style.display = 'block';
-          var fallbackHtml = '<p style="text-align: center; color: #666; margin: 20px 0;"><strong>Vista previa de PDF</strong><br>En dispositivos móviles se recomienda descargar el PDF para verlo en tu aplicación de lectura preferida.</p><p style="text-align: center;"><a href="assets/PORTAFOLIO V2.pdf" download="PORTAFOLIO V2.pdf" class="btn-download" style="display: inline-block; background-color: #000; color: white; padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: 600;">\u2b0f Descargar PDF</a></p>';
-          document.getElementById('pdfViewerPortfolio').innerHTML = fallbackHtml;
         }
       </script>
     </div>
