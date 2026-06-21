@@ -103,14 +103,20 @@
         background-color: rgb(255, 255, 255);
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        overflow: hidden;
+        overflow: auto;
       }
 
       .pdf-viewer iframe {
         width: 100%;
-        height: 700px;
+        height: 800px;
         border: none;
         display: block;
+      }
+
+      @media (max-width: 1024px) {
+        .pdf-viewer iframe {
+          height: 600px;
+        }
       }
 
       @media (max-width: 768px) {
@@ -144,7 +150,8 @@
         }
 
         .pdf-viewer iframe {
-          height: 800px;
+          height: 70vh;
+          min-height: 500px;
         }
       }
 
@@ -170,7 +177,8 @@
         }
 
         .pdf-viewer iframe {
-          height: 900px;
+          height: 80vh;
+          min-height: 400px;
         }
       }
     </style>
@@ -186,9 +194,21 @@
           </a>
         </div>
       </div>
-      <div class="pdf-viewer">
-        <iframe src="assets/Alonso Palafox Enrique - CV.pdf" type="application/pdf"></iframe>
+      <div class="pdf-viewer" id="pdfViewerCV">
+        <embed src="assets/Alonso Palafox Enrique - CV.pdf" type="application/pdf" />
       </div>
+      <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #666;" id="pdfFallbackCV" style="display: none;">
+        Tu navegador no puede visualizar PDFs. 
+        <a href="assets/Alonso Palafox Enrique - CV.pdf" download="Alonso Palafox Enrique - CV.pdf" style="color: #000; font-weight: 600; text-decoration: underline;">Descarga el PDF aquí</a>
+      </p>
+      <script>
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          document.getElementById('pdfViewerCV').innerHTML = '';
+          document.getElementById('pdfFallbackCV').style.display = 'block';
+          var fallbackHtml = '<p style="text-align: center; color: #666; margin: 20px 0;"><strong>Vista previa de PDF</strong><br>En dispositivos móviles se recomienda descargar el PDF para verlo en tu aplicación de lectura preferida.</p><p style="text-align: center;"><a href="assets/Alonso Palafox Enrique - CV.pdf" download="Alonso Palafox Enrique - CV.pdf" class="btn-download" style="display: inline-block; background-color: #000; color: white; padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: 600;">\u2b0f Descargar PDF</a></p>';
+          document.getElementById('pdfViewerCV').innerHTML = fallbackHtml;
+        }
+      </script>
     </div>
 
     <!-- Botón flotante de email -->
