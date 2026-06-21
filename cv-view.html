@@ -126,21 +126,174 @@
       .cv-text-fallback {
         display: none;
         background-color: rgb(255, 255, 255);
-        padding: 20px;
+        padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         margin-top: 20px;
-        font-size: 0.9rem;
-        line-height: 1.6;
         color: rgb(60, 60, 60);
+        font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+        line-height: 1.8;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+
+      .cv-text-fallback strong {
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+        letter-spacing: 0.5px;
+      }
+
+      .cv-text-fallback ul, .cv-text-fallback ol {
+        margin-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .cv-text-fallback li {
+        margin-bottom: 6px;
+        line-height: 1.7;
+      }
+
+      .cv-text-fallback p {
+        margin-bottom: 10px;
         white-space: pre-wrap;
         word-wrap: break-word;
-        font-family: 'Courier New', monospace;
+      }
+
+      .cv-section-title {
+        border-bottom: 2px solid rgb(149, 149, 149);
+        padding-bottom: 8px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        letter-spacing: 1px;
+        font-size: 1.05em;
+      }
+
+      .cv-header-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.2em;
+        color: rgb(0, 0, 0);
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+      }
+
+      .cv-contact-info {
+        text-align: center;
+        color: rgb(80, 80, 80);
+        font-size: 0.95em;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 1024px) {
+        .cv-text-fallback {
+          padding: 26px;
+          font-size: 0.95rem;
+          line-height: 1.75;
+        }
+
+        .cv-text-fallback strong {
+          font-size: 1.05em;
+          margin-top: 16px;
+        }
+
+        .cv-section-title {
+          font-size: 1em;
+          margin-top: 18px;
+        }
+
+        .cv-header-title {
+          font-size: 1.15em;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .cv-text-fallback.show {
+          display: block;
+        }
+
+        .cv-text-fallback {
+          padding: 20px;
+          font-size: 0.92rem;
+          line-height: 1.7;
+          margin-top: 15px;
+        }
+
+        .cv-text-fallback strong {
+          font-size: 1em;
+          margin-top: 14px;
+          margin-bottom: 6px;
+        }
+
+        .cv-section-title {
+          font-size: 0.95em;
+          margin-top: 16px;
+          padding-bottom: 6px;
+        }
+
+        .cv-header-title {
+          font-size: 1.1em;
+        }
+
+        .cv-contact-info {
+          font-size: 0.9em;
+        }
+
+        .cv-text-fallback ul, .cv-text-fallback ol {
+          margin-left: 16px;
+        }
       }
 
       @media (max-width: 480px) {
         .cv-text-fallback.show {
           display: block;
+        }
+
+        .cv-text-fallback {
+          padding: 16px;
+          font-size: 0.88rem;
+          line-height: 1.65;
+          margin-top: 12px;
+          border-radius: 6px;
+        }
+
+        .cv-text-fallback strong {
+          font-size: 0.95em;
+          margin-top: 12px;
+          margin-bottom: 5px;
+        }
+
+        .cv-section-title {
+          font-size: 0.92em;
+          margin-top: 14px;
+          padding-bottom: 5px;
+        }
+
+        .cv-header-title {
+          font-size: 1.05em;
+          margin-bottom: 3px;
+        }
+
+        .cv-contact-info {
+          font-size: 0.87em;
+          margin-bottom: 12px;
+        }
+
+        .cv-text-fallback ul, .cv-text-fallback ol {
+          margin-left: 14px;
+          margin-top: 6px;
+          margin-bottom: 6px;
+        }
+
+        .cv-text-fallback li {
+          margin-bottom: 5px;
         }
       }
 
@@ -237,80 +390,69 @@
       <div class="pdf-viewer" id="pdfViewerCV">
         <embed src="assets/Alonso Palafox Enrique - CV.pdf" type="application/pdf" />
       </div>
-      <div class="cv-text-fallback" id="cvTextFallback">ENRIQUE CARLOS ALONSO PALAFOX
-------------------------------
-Toluca, Estado de México | Teléfono: +52 5617338060 | Correo: enriquealonsopalafox11@gmail.com
+      <div class="cv-text-fallback" id="cvTextFallback">
+        <div class="cv-header-title">ENRIQUE CARLOS ALONSO PALAFOX</div>
+        <div class="cv-contact-info">
+          Toluca, Estado de México | Teléfono: +52 5617338060<br/>
+          Correo: enriquealonsopalafox11@gmail.com
+        </div>
 
-PERFIL PROFESIONAL
+        <div class="cv-section-title">PERFIL PROFESIONAL</div>
+        <p>Diseñador y Animador especializado en Visual Development (VisDev), con un enfoque estratégico en la conceptualización e investigación de audiencias para garantizar resultados funcionales y narrativos. Experto en la gestión de proyectos creativos mediante metodologías ágiles y liderazgo de equipos multidisciplinarios en entornos de producción audiovisual.</p>
 
-Diseñador y Animador especializado en Visual Development (VisDev), con un enfoque estratégico
-en la conceptualización e investigación de audiencias para garantizar resultados funcionales y
-narrativos. Experto en la gestión de proyectos creativos mediante metodologías ágiles y liderazgo
-de equipos multidisciplinarios en entornos de producción audiovisual.
-------------------------------
+        <div class="cv-section-title">EXPERIENCIA</div>
+        <strong>DISEÑADOR Y ANIMADOR INDEPENDIENTE (Freelance)</strong>
+        <p><strong style="display:inline; color: rgb(80,80,80);">Artista VisDev y Creador de Contenido -</strong> Enero 2024 – Actualidad</p>
+        <ul>
+          <li>Implementé la metodología Personal Scrum para gestionar el desarrollo iterativo y la evolución constante de mi portafolio digital y proyectos de diseño.</li>
+          <li>Desarrollé entornos y escenarios 3D complejos en Autodesk Maya, ejecutando procesos de iluminación, sombreado y reemplazo de fondos (sky replacement).</li>
+          <li>Rediseñé la identidad visual y logotipos (como SFACTOR X3), optimizando la estructura tipográfica y el layout bajo parámetros técnicos de color y legibilidad.</li>
+          <li>Incrementé la comunidad en YouTube de 0 a más de 8,000 seguidores orgánicos mediante estrategias de contenido audiovisual.</li>
+          <li>Aseguré un tráfico mensual de más de 20,000 visitas digitales, monetizando el canal a través de la producción constante de contenido de animación.</li>
+          <li>Ejecuté proyectos de Branding para pequeñas empresas, garantizando un posicionamiento efectivo ante sus públicos objetivos mediante diseño de identidad.</li>
+        </ul>
 
-EXPERIENCIA
-DISEÑADOR Y ANIMADOR INDEPENDIENTE (Freelance)
+        <strong>UNIVERSIDAD TECNOLÓGICA DE MÉXICO (UNITEC)</strong>
+        <p><strong style="display:inline; color: rgb(80,80,80);">Líder de Producción Audiovisual -</strong> Enero 2025 – Abril 2026</p>
+        <ul>
+          <li>Lideré equipos de trabajo de gran escala para la realización de cortometrajes y proyectos de cine, supervisando desde la preproducción hasta la entrega final.</li>
+          <li>Coordiné flujos de trabajo técnicos en modelado 3D y postproducción, asegurando el cumplimiento de plazos y estándares de calidad académica y profesional.</li>
+          <li>Gestioné la comunicación entre departamentos creativos para unificar la visión artística del proyecto y optimizar los recursos de producción.</li>
+        </ul>
 
-Artista VisDev y Creador de Contenido - Enero 2024 – Actualidad
+        <strong>CONTRALORÍA MUNICIPAL (EDOMEX)</strong>
+        <p><strong style="display:inline; color: rgb(80,80,80);">Diseñador de Identidad Visual -</strong> Agosto 2022 – Diciembre 2022</p>
+        <ul>
+          <li>Diseñé y desplegué la nueva identidad visual para la página web y redes sociales oficiales del municipio.</li>
+          <li>Incrementé el tráfico y las visitas a las plataformas digitales en un 30% gracias a la reestructuración estética y funcional de los activos gráficos.</li>
+          <li>Ejecuté tareas técnicas de fotografía, edición de video, restauración digital y recuperación de documentos históricos.</li>
+        </ul>
 
-• Implementé la metodología Personal Scrum para gestionar el desarrollo iterativo y la
-evolución constante de mi portafolio digital y proyectos de diseño.
-• Desarrollé entornos y escenarios 3D complejos en Autodesk Maya, ejecutando procesos de
-iluminación, sombreado y reemplazo de fondos (sky replacement).
-• Rediseñé la identidad visual y logotipos (como SFACTOR X3), optimizando la estructura
-tipográfica y el layout bajo parámetros técnicos de color y legibilidad.
-• Incrementé la comunidad en YouTube de 0 a más de 8,000 seguidores orgánicos mediante
-estrategias de contenido audiovisual.
-• Aseguré un tráfico mensual de más de 20,000 visitas digitales, monetizando el canal a
-través de la producción constante de contenido de animación.
-• Ejecuté proyectos de Branding para pequeñas empresas, garantizando un posicionamiento
-efectivo ante sus públicos objetivos mediante diseño de identidad.
+        <div class="cv-section-title">EDUCACIÓN</div>
+        <strong>UNIVERSIDAD TECNOLÓGICA DE MÉXICO (UNITEC)</strong>
+        <ul>
+          <li>Maestría en Diseño Multimedia - Actual</li>
+          <li>Lic. en Diseño, Animación y Arte Digital - Abril 2023 - 2026</li>
+        </ul>
 
-UNIVERSIDAD TECNOLÓGICA DE MÉXICO (UNITEC)
-Líder de Producción Audiovisual - Enero 2025 – Abril 2026
+        <div class="cv-section-title">HABILIDADES</div>
+        <ul>
+          <li><strong style="color: rgb(0,0,0);">Software Adobe:</strong> Photoshop, Illustrator, After Effects, Premiere, Lightroom, Substance Painter.</li>
+          <li><strong style="color: rgb(0,0,0);">3D y Modelado:</strong> Autodesk Maya, Blender, Nomad Sculpt, Feather 3D, AutoCAD.</li>
+          <li><strong style="color: rgb(0,0,0);">Ilustración y Diseño:</strong> Krita, Procreate, Figma, Affinity, Canva.</li>
+          <li><strong style="color: rgb(0,0,0);">Audio y Video:</strong> CapCut, BandLab, Audacity.</li>
+          <li><strong style="color: rgb(0,0,0);">Programación:</strong> Python, HTML, C, C++, PSeInt.</li>
+          <li><strong style="color: rgb(0,0,0);">Idiomas:</strong> Inglés (Nivel B2 - 80% completado).</li>
+        </ul>
 
-• Lideré equipos de trabajo de gran escala para la realización de cortometrajes y proyectos de
-cine, supervisando desde la preproducción hasta la entrega final.
-• Coordiné flujos de trabajo técnicos en modelado 3D y postproducción, asegurando el
-cumplimiento de plazos y estándares de calidad académica y profesional.
-• Gestioné la comunicación entre departamentos creativos para unificar la visión artística del
-proyecto y optimizar los recursos de producción.
-
-CONTRALORÍA MUNICIPAL (EDOMEX)
-Diseñador de Identidad Visual - Agosto 2022 – Diciembre 2022
-
-• Diseñé y desplegué la nueva identidad visual para la página web y redes sociales oficiales
-del municipio.
-• Incrementé el tráfico y las visitas a las plataformas digitales en un 30% gracias a la
-reestructuración estética y funcional de los activos gráficos.
-• Ejecuté tareas técnicas de fotografía, edición de video, restauración digital y recuperación
-de documentos históricos.
-------------------------------
-
-EDUCACIÓN
-UNIVERSIDAD TECNOLÓGICA DE MÉXICO (UNITEC)
-
-• Maestría en Diseño Multimedia - Actual
-• Lic. en Diseño, Animación y Arte Digital - Abril 2023 - 2026
-
-HABILIDADES
-
-• Software Adobe: Photoshop, Illustrator, After Effects, Premiere, Lightroom, Substance
-Painter.
-• 3D y Modelado: Autodesk Maya, Blender, Nomad Sculpt, Feather 3D, AutoCAD.
-• Ilustración y Diseño: Krita, Procreate, Figma, Affinity, Canva.
-• Audio y Video: CapCut, BandLab, Audacity.
-• Programación: Python, HTML, C, C++, PSeInt.
-• Idiomas: Inglés (Nivel B2 - 80% completado).
-
-CERTIFICACIONES
-
-• Emprendimientos Creativos | Coursera (2026).
-• This Is Animation | Sony Pictures Animation & YellowBrick (2025).
-• Pensamiento Crítico y Resolución de Problemas | Santander Open Academy (2025).
-• Integridad Académica | UNITEC (2025).
-</div>
+        <div class="cv-section-title">CERTIFICACIONES</div>
+        <ul>
+          <li>Emprendimientos Creativos | Coursera (2026).</li>
+          <li>This Is Animation | Sony Pictures Animation & YellowBrick (2025).</li>
+          <li>Pensamiento Crítico y Resolución de Problemas | Santander Open Academy (2025).</li>
+          <li>Integridad Académica | UNITEC (2025).</li>
+        </ul>
+      </div>
       <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #666;" id="pdfFallbackCV" style="display: none;">
         Si tu navegador no puede visualizar el archivo <a href="assets/Alonso Palafox Enrique - CV.pdf" download="Alonso Palafox Enrique - CV.pdf" style="color: #000; font-weight: 600; text-decoration: underline;">Descarga el PDF aquí</a>
       </p>
